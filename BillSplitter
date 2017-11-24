@@ -1,0 +1,71 @@
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+   // create classes group user bill 
+    public static void main(String[] args) {
+        //Variable Declarations
+        String place;
+        String[] roommates = new String[20];
+        String[] bills = new String[20];
+        int amount[] = new int[20];
+        int numRoom = 0;
+        int numBills = 0;
+        int i = 0;
+         
+        Scanner input = new Scanner(System.in);
+         
+        System.out.println("Welcome to  Bill Splitter!\n");
+         
+        //Get Residence Name from User
+        System.out.print("Please Enter Name of Place or Address:  ");
+        place = input.nextLine();
+         
+        //Get # of Roommates at Residence
+        System.out.print("How Many users at " + place + ":  ");
+        numRoom = input.nextInt();
+         
+        //Get user names
+        for(i = 0; i <= numRoom; i++){
+            roommates[i] = input.nextLine();
+            System.out.print("What is Person Number " + (i + 1) + "'s Name:  ");
+        } 
+         
+        for(i = 0; i <= numRoom; i++){
+            System.out.println(roommates[i]);
+        }
+         
+        //Get # of Bills Split Between Roommates
+        System.out.print("What is the Total Number of Bills to be Split at " + place + ":  ");
+        numBills = input.nextInt();
+         
+        //Get Names of Roommates
+        for(i = 0; i <= numBills; i++){
+            bills[i] = input.nextLine();
+            System.out.print("Please List Bill Number " + (i + 1) + ":  ");
+        }
+         
+        for(i = 0; i <= numBills; i++){
+            System.out.println(bills[i]);
+        }
+          
+        //Get Amount of Each Bill
+        for(i = 0; i <= numBills; i++){
+            amount[i] = input.nextInt();
+            System.out.print("What is the Total Amount of the " + (bills[i]) + "Bill:  $");
+        }
+         
+         for(i = 0; i <= numBills; i++){
+            System.out.print(bills[i]);
+            System.out.print("\t");
+            System.out.println(amount[i]);
+        }         
+    }
+     
+}
+
